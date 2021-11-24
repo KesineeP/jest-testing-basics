@@ -39,11 +39,28 @@ test("Should be under 1600", () => {
 
 //REGEX
 test("There is no I in team", () => {
-  expect("teami").not.toMatch(/I/i);
+  expect("team").not.toMatch(/I/i);
 });
 
 //ARRAY
 test("Admin should be in username", () => {
   usernames = ["john", "karen", "admin"];
   expect(usernames).toContain("admin");
+});
+
+//WORKING WITH ASYNC DATA
+
+//Promise
+// test("User fetched name should be Leanne Graham", () => {
+//   expect.assertions(1);
+//   return functions.fetchUser().then((data) => {
+//     expect(data.name).toEqual("Leanne Graham");
+//   });
+// });
+
+//Async Await
+test("User fetched name should be Leanne Graham", async () => {
+  expect.assertions(1);
+  const data = await functions.fetchUser();
+  expect(data.name).toEqual("Leanne Graham");
 });

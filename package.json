@@ -19,5 +19,8 @@
   "homepage": "https://github.com/KesineeP/jest-testing-basics#readme",
   "devDependencies": {
     "jest": "^27.3.1"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
   }
 }
